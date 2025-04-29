@@ -73,6 +73,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@netlify/next": "^1.4.9",
     "@types/react-slick": "^0.23.13"
   }
 }
