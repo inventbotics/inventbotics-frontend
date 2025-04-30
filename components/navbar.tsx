@@ -45,7 +45,7 @@ export function Navbar() {
             className="flex items-center space-x-2"
           >
             <img 
-            src="https://github.com/karthikrajask/inventbotics/blob/main/logo_png_invert_transparent.png?raw=true" 
+            src="/front_logo.png" 
             alt="Inventbotics Components" 
             className="h-20 w-auto mt-2" // Adjusted height and added margin-top for better positioning
           />

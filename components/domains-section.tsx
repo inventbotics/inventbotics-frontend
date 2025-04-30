@@ -25,7 +25,7 @@ export function DomainsSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/domains")
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/domains`)
       .then(res => res.json())
       .then(data => setDomains(data));
   }, []);

@@ -10,7 +10,7 @@ export function HeroSection() {
 
   useEffect(() => {
     // 👇 This will record a view whenever HeroSection loads
-    fetch("http://localhost:3000/api/views", {
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/views`, {
       method: "POST",
     })
       .then((res) => console.log("✅ View recorded from HeroSection"))

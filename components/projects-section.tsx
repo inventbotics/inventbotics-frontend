@@ -34,8 +34,8 @@ export function ProjectsSection() {
   useEffect(() => {
     // Fetch domains and projects
     Promise.all([
-      fetch("http://localhost:3000/api/domains").then(res => res.json()),
-      fetch("http://localhost:3000/api/projects").then(res => res.json())
+      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/domains`).then(res => res.json()),
+      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/projects`).then(res => res.json())
     ]).then(([domainsData, projectsData]) => {
       setDomains(domainsData);
       setProjects(projectsData);

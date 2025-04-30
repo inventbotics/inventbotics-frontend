@@ -20,7 +20,7 @@ export function ClientsSection() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/clients")
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/clients`)
       .then((res) => res.json())
       .then((data) => setClients(data));
   }, []);

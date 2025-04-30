@@ -22,10 +22,17 @@ export function AboutSection() {
   }, [isTransitioning, aboutData]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/about")
-      .then((res) => res.json())
-      .then((data) => setAboutData(data));
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/about`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch about data");
+        return res.json();
+      })
+      .then((data) => setAboutData(data))
+      .catch((err) => {
+        console.error("About API fetch error:", err);
+      });
   }, []);
+  
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout | null = null;
