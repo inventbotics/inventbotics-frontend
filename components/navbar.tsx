@@ -47,7 +47,7 @@ export function Navbar() {
             <img 
             src="/front_logo.png" 
             alt="Inventbotics Components" 
-            className="h-20 w-auto mt-2" // Adjusted height and added margin-top for better positioning
+            className="h-12 w-auto mt-2" // Adjusted height and added margin-top for better positioning
           />
 
           </Link>
