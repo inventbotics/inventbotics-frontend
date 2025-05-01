@@ -14,6 +14,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Inventbotics Components - Innovative Engineering Solutions',
   description: 'Inventbotics Components specializes in IoT, Instrumentation, Secured Wireless Transmission, Power Systems, Data Analytics, Robotics, and PCB Designing.',
+  icons: {
+    icon: '/highend.png', 
+  },
 };
 
 export default function RootLayout({
